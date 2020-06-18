@@ -1,0 +1,85 @@
+<html>
+<head>
+        
+    <meta charset="UTF-8">
+    <title>Radyo Gtu Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" id="bootstrap-css" href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body> 
+    <div class="jumbotron text-center myjumbo">
+        <h2>Radyo Gtu Sohbet Odası</h2>
+        
+    
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row"> 
+            <div class="col-md-3">
+                <div class="audio-player-cont">
+                    <div class="logo">
+                        <img src="images/audio-player.png" />
+                    </div>
+                    <div class="player">
+                        <div id="songTitle" class="song-title">
+                            Gebze Teknik Üniversitesi Radyo
+                        </div>
+                        <div class="controllers">
+                            <img class="toggle" src="images/play.png" width="40px" onclick="playOrPauseSong(this);" />
+                            <a class="currentTime">00:00</a>
+                        </div>
+                        <div id="metadata" class="meta">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-offset-1 col-md-5">
+                <div class="panel panel-ilk">
+                    <div class="panel-basi">
+                        <span class="glyphicon glyphicon-comment"></span> 
+                        Sohbet Ekranı
+                        <p align="center" id="log"></p>
+                    </div>
+                    <div class="panel-body" id="panels">
+                        <ul class="chat" id="message-box"></ul>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input id="input-nickname" type="text" class="form-control input-sm nickname" placeholder="Nickname" />
+                            </div>
+                            <div class="col-md-2 col-md-offset-4">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning btn-sm send" id="btn-nickname">Save</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <input id="input-message" type="text" class="form-control input-sm nickname" placeholder="Typing your message here" />
+                            </div>
+                            <div class="col-md-2">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning btn-sm send" id="btn-chat">Send</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div> 
+           
+        </div>
+        
+    </div> 
+
+    
+    
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>    
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+    <script src="player.js"></script>
+</body>
+</html>

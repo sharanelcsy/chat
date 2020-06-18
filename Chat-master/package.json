@@ -1,0 +1,16 @@
+{
+  "name": "chatting",
+  "version": "0.0.0",
+  "description": "A simple chat client using socket.io",
+  "main": "app.js",
+  "author": "Safa Emre Dulundu",
+  "private": true,
+  "license": "BSD",
+  "dependencies": {
+    "express": "4.13.4",
+    "socket.io": "^2.0.4"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
